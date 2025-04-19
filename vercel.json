@@ -1,0 +1,9 @@
+{
+  "version": 2,
+  "routes": [
+    {
+      "src": "/api/whisper",
+      "dest": "/api/whisper.js"
+    }
+  ]
+}
