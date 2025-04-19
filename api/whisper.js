@@ -1,6 +1,4 @@
-const fetch = require('node-fetch');
-
-module.exports = async (req, res) => {
+export default async function handler(req, res) {
   const chaosSeed = Date.now() % 1000;
 
   const response = await fetch('https://api.openai.com/v1/chat/completions', {
@@ -28,4 +26,4 @@ module.exports = async (req, res) => {
 
   const data = await response.json();
   res.status(200).json({ whisper: data.choices[0].message.content });
-};
+}
